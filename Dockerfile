@@ -1,4 +1,5 @@
-FROM golang:1.14 as heh
+ 
+FROM golang:1.14 as httpservice
 
 ENV GOPATH /home/myrto/go
 ENV PATH ${GOPATH}/bin:$PATH
@@ -13,4 +14,4 @@ RUN GIT_COMMIT=$(git rev-list -1 HEAD) && \
 
 EXPOSE 8080
 
-CMD ["./heh"]
+CMD ["./httpservice"]
