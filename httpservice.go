@@ -11,9 +11,11 @@ import (
 )
 
 type Profile struct {
-	Git_hash            string
-	Name_of_the_project string
+	GitHash          string
+	NameOfTheProject string
 }
+
+var GitCommit string
 
 func world(w http.ResponseWriter, r *http.Request) {
 	value, _ := r.URL.Query()["name"]
@@ -25,7 +27,8 @@ func world(w http.ResponseWriter, r *http.Request) {
 	} else if r.URL.Path[1:] == "helloworld" {
 		fmt.Fprintln(w, "Hello Stranger!")
 	} else if r.URL.Path[1:] == "versionz" {
-		profile := Profile{"dd6492921d3fec85f9dcedfa58b20702b2e781a6", "httpservice"}
+
+		profile := Profile{GitCommit, "httpservice"}
 
 		js, err := json.Marshal(profile)
 		if err != nil {
