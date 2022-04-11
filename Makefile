@@ -13,3 +13,5 @@ docker-build:
 
 docker-run:
 	sudo docker run -p 8080:8080 -t httpservice
+
+docker: docker-build docker-run
