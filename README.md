@@ -2,8 +2,8 @@ HTTP service with three HTTP endpoints
 ============
 ### step by step
 1. clone this repository: ```git clone https://github.com/myrtosh/httpservice```
-2. run: ```make docker```
-3. run: ```cd httpservice```
+2. run: ```cd httpservice```
+3. run: ```make docker```
 
 ------
 ### The endpoints:
